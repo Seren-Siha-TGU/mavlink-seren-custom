@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<mavlink>
+
+  <messages>
+
+    <message id="11961" name="TARGET_LOCKING_STATUS">
+      <description>Telemetry</description>
+      <field type="uint8_t" name="is_locked">Padisahimiz cok yasa hz. Cihangir</field>
+    </message>
+
+
+    <message id="11962" name="SEREN_ALTITUDE">
+      <description>Telemetry</description>
+      <field type="float" name="altitude">z position 1 / Altitude 1</field>
+    </message>
+    
+    <message id="11963" name="SEREN_SPEED">
+      <description>seren speed</description>
+      <field type="float" name="uav_speed">uaw speed</field>
+    </message>
+
+    <message id="11964" name="SEREN_TELEMETRY">
+      <description>Telemetry data including vehicle status, target info, and GPS time</description>
+      <field type="float" name="latitude">Latitude</field>
+      <field type="float" name="longitude">Longitude</field>
+      <field type="float" name="altitude">Altitude</field>
+      <field type="float" name="pitch">Pitch</field>
+      <field type="float" name="yaw">Yaw</field>
+      <field type="float" name="roll">Roll</field>
+      <field type="float" name="speed">Speed</field>
+      <field type="uint8_t" name="autonomous">Autonomous status (1=Yes, 0=No)</field>
+      <field type="uint8_t" name="locked">Lock status (1=Locked, 0=Not Locked)</field>
+      <field type="uint16_t" name="target_x">Target center X</field>
+      <field type="uint16_t" name="target_y">Target center Y</field>
+      <field type="uint16_t" name="target_width">Target width</field>
+      <field type="uint16_t" name="target_height">Target height</field>
+      <field type="uint8_t" name="gps_hour">GPS hour</field>
+      <field type="uint8_t" name="gps_minute">GPS minute</field>
+      <field type="uint8_t" name="gps_second">GPS second</field>
+      <field type="uint16_t" name="gps_millisecond">GPS millisecond</field>
+    </message>
+
+    <message id="11965" name="SEREN_LOCK_INFO">
+      <description>Locking information</description>
+      <field type="uint8_t" name="start_hour">Start time (hour)</field>
+      <field type="uint8_t" name="start_min">Start time (minute)</field>
+      <field type="uint8_t" name="start_sec">Start time (second)</field>
+      <field type="uint16_t" name="start_ms">Start time (millisecond)</field>
+      <field type="uint8_t" name="end_hour">End time (hour)</field>
+      <field type="uint8_t" name="end_min">End time (minute)</field>
+      <field type="uint8_t" name="end_sec">End time (second)</field>
+      <field type="uint16_t" name="end_ms">End time (millisecond)</field>
+      <field type="uint8_t" name="auto_lock">Autonomous lock status (1 = active, 0 = inactive)</field>
+    </message>
+
+    <message id="11966" name="SEREN_KAMIKAZE_INFO">
+      <description>Kamikaze mission timing and QR code data</description>
+      <field type="uint8_t" name="start_hour">Kamikaze start hour</field>
+      <field type="uint8_t" name="start_minute">Kamikaze start minute</field>
+      <field type="uint8_t" name="start_second">Kamikaze start second</field>
+      <field type="uint16_t" name="start_millisecond">Kamikaze start millisecond</field>
+      <field type="uint8_t" name="end_hour">Kamikaze end hour</field>
+      <field type="uint8_t" name="end_minute">Kamikaze end minute</field>
+      <field type="uint8_t" name="end_second">Kamikaze end second</field>
+      <field type="uint16_t" name="end_millisecond">Kamikaze end millisecond</field>
+      <field type="uint8_t[245]" name="qr_text">QR code content</field>
+    </message>
+
+    <message id="11967" name="SEREN_TARGET_TELEMETRY">
+      <description>Telemetry data for selected target UAV</description>
+      <field type="float" name="latitude">Latitude of the UAV</field>
+      <field type="float" name="longitude">Longitude of the UAV</field>
+      <field type="float" name="altitude">Altitude of the UAV</field>
+      <field type="float" name="pitch">Pitch of the UAV</field>
+      <field type="float" name="yaw">Yaw of the UAV</field>
+      <field type="float" name="roll">Roll of the UAV</field>
+      <field type="float" name="speed">Speed of the UAV</field>
+    </message>
+
+    <message id="11968" name="SEREN_HSS_COORDINATES">
+      <description>Coordinates of the air defense system (HSS)</description>
+      <field type="float[20]" name="hss_latitudes">HSS latitudes</field>
+      <field type="float[20]" name="hss_longitudes">HSS longitudes</field>
+      <field type="float[20]" name="hss_radius">HSS radius</field>
+    </message>
+
+
+    <message id="11969" name="SEREN_FLIGHT_MODE_CHANGE">
+      <description>Information about the change in flight mode</description>
+      <field type="uint8_t" name="flight_mode">Current flight mode (0: Manual, 1: Autonomous, 2: Emergency, etc.)</field>
+    </message>
+
+  </messages>
+</mavlink>
+
