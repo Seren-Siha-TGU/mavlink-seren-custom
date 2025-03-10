@@ -89,6 +89,13 @@
       <description>Information about the change in flight mode</description>
       <field type="uint8_t" name="flight_mode">Current flight mode (0: Manual, 1: Autonomous, 2: Emergency, etc.)</field>
     </message>
+    
+    <message id="11970" name="SEREN_QR_COORDINATES">
+      <description>QR code GPS coordinates</description>
+      <field type="float" name="qr_latitude">Latitude of the QR code</field>
+      <field type="float" name="qr_longitude">Longitude of the QR code</field>
+    </message>
+
 
   </messages>
 </mavlink>
